@@ -2,6 +2,7 @@ import time
 import os
 import random
 
+
 print ("Hello, We're going to be playing a game.")
 time.sleep (1)
 user_name = input ("What's your name?: ")
@@ -11,9 +12,24 @@ print ("1. You only have 100 lives. Each time there's an error, you lose a life\
 time.sleep (1)
 os.system ("clear")
 def mathGame():
+    lives = 100
     print ("Here's the first game")
     time.sleep (1)
-    number_guess
-    number_guess = input ("A good old math game.\n Guess The Number out of 10,000!: ")
+    random_guess = random.randint(1,10000)
     while True:
-        if number_guess
+        try: 
+            number_guess = int(input("A good old math game.\n Guess The Number out of 10,000!: "))
+        except ValueError:
+            print("That's not a valid number. Try again.")
+            continue
+        if number_guess == random_guess:
+            print (f"{number_guess} is correct!")
+            break
+        elif number_guess >= random_guess:
+            lives -= 1
+            print (f"{number_guess} is way to high. Only {lives} left... ")
+        elif number_guess <= random_guess:
+            lives -= 1
+            print (f"{number_guess} is way to low. Only {lives} left... ")
+mathGame()
+            
