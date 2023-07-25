@@ -10,7 +10,7 @@ time.sleep (1)
 print (f"Hey {user_name}. Here Are The Rules\n")
 print ("1. You only have 100 lives. Each time there's an error, you lose a life\n2. Don't Get Mad")
 time.sleep (1)
-os.system ("clear")
+os.system ("cls")
 def mathGame():
     lives = 100
     print ("Here's the first game")
@@ -31,5 +31,14 @@ def mathGame():
         elif number_guess <= random_guess:
             lives -= 1
             print (f"{number_guess} is way to low. Only {lives} left... ")
-mathGame()
+    return lives
             
+def amount(lives):
+    print (f"Wow, that only took {100 - lives} lives")
+remaining_lives = mathGame()
+amount(remaining_lives)
+
+loses = int(input("""Congrats! You passed the first level. Can you do me a favor.
+               Choose a number between 1-10"""))
+print (f"Okay, you now have {remaining_lives-loses} lives left! I told you this would frustrate you!")
+
