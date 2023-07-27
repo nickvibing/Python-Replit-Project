@@ -49,7 +49,15 @@ option = option.lower()
 if option == "Yes" or option == "Y":
     print ("Yes!")
     def higherlower():
-        pass
+        print ("It's simple. I'll give you a number. You have to guess whether the next number will be higher or lower. You guess correctly, you gain a life back. Incorrectly and yah...")
+        while True:
+            randomnumber = random.randint(1,10000)
+            randomnumber1 = random.randint(1,10000)
+            print (randomnumber)
+            userguess = input("Will the next number be higher or lower.")
+            userguess =userguess.lower()
+            if  randomnumber <= randomnumber1: 
+
 elif option != "Yes" or option != "Y":
     print ("Interesting...")
     time.sleep (1)
