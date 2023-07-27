@@ -42,3 +42,4 @@ loses = int(input("""Congrats! You passed the first level. Can you do me a favor
                Choose a number between 1-10"""))
 print (f"Okay, you now have {remaining_lives-loses} lives left! I told you this would frustrate you!")
 
+print ("testing")
