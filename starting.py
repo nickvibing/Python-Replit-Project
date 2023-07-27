@@ -35,13 +35,24 @@ def mathGame():
             
 def amount(lives):
     print (f"Wow, that only took {100 - lives} lives")
+    print (f" You now only have {remaining_lives}")
 remaining_lives = mathGame()
 amount(remaining_lives)
 
-loses = int(input("""Congrats! You passed the first level. Can you do me a favor.
-               Choose a number between 1-10"""))
+print ("Congrats! You passed the first level. Now, can you do me a favor...")
+loses = int(input("Choose a number between 1-10"))
 print (f"Okay, you now have {remaining_lives-loses} lives left! I told you this would frustrate you!")
 
-print ("testing")
-print ("more confused testing")
-print ("more testing..")
+print ("I have a question for you again... No tricks this time!")
+option = input ("Do you want to regain some of your lives back? Your either in or your out. We can do a game of higher or lower?: ")
+option = option.lower() 
+if option == "Yes" or option == "Y":
+    print ("Yes!")
+    def higherlower():
+        pass
+elif option != "Yes" or option != "Y":
+    print ("Interesting...")
+    time.sleep (1)
+    print ("To bad... we're still playing!")
+    def higherlower():
+        
